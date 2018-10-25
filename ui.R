@@ -2,5 +2,9 @@ library(shiny)
 
 fluidPage(
 	textInput('experimentName',label = '',value = ''),
-	uiOutput('gemmaPage')
+	tabsetPanel(
+		tabPanel('gemma',uiOutput('gemmaPage')),
+		tabPanel('GEO',uiOutput('geoPage'))
+	)
+
 )
